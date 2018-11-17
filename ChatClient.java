@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 final class ChatClient {
@@ -149,8 +150,11 @@ final class ChatClient {
         public void run() {
             try {
                 while (true) {
+                    String format = "HH:mm:ss";
+                    SimpleDateFormat sdf = new SimpleDateFormat(format);
+                    String alex = sdf.toString();
                     String msg = sInput.readObject().toString();
-                    System.out.println(username + ": " + msg);
+                    System.out.println(alex + " " + username + ":" + msg);
                 }
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
