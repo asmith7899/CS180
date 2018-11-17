@@ -120,11 +120,11 @@ final class ChatServer {
 
         public boolean writeMessage(String message) { //writes message to user's terminal
             if (socket.isConnected()) {
-//                try {
-//                  //  this.sOutput.writeObject(message);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
+                try {
+                    this.sOutput.writeObject(message);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 return true;
             }
             return false;

@@ -1,7 +1,6 @@
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 /**
- * ChatClient prints multiple times
  * ChatClient doesn't correctly construct itself using parameters
  * ChatClient & Server only print one ChatMessage; they remain open after, but don't print anything
  *
@@ -150,8 +149,8 @@ final class ChatClient {
         public void run() {
             try {
                 while (true) {
-                    String msg = sInput.readObject().toString(); //idk why this isn't working
-                    System.out.println(username + ": " +  msg);
+                    String msg = sInput.readObject().toString();
+                    System.out.println(msg);
                 }
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
