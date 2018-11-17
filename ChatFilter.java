@@ -1,4 +1,5 @@
 
+
 public class ChatFilter {
 
     public ChatFilter(String badWordsFileName) {

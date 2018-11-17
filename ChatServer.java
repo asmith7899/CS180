@@ -130,6 +130,9 @@ final class ChatServer {
             return false;
         }
 
+
+
+
         public synchronized void remove(int id) { //removes clients from arraylist
             clients.remove(this.id);
         }

@@ -145,6 +145,7 @@ final class ChatClient {
      * It will be responsible for listening for messages from the ChatServer.
      * ie: When other clients send messages, the server will relay it to the client.
      */
+
     private final class ListenFromServer implements Runnable {
         public void run() {
             try {

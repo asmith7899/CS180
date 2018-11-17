@@ -1,5 +1,6 @@
 import java.io.Serializable;
 
+
 final class ChatMessage implements Serializable {
     private int type;
     private String message;
