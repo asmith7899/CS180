@@ -150,7 +150,7 @@ final class ChatClient {
             try {
                 while (true) {
                     String msg = sInput.readObject().toString();
-                    System.out.println(msg);
+                    System.out.println(username + ": " + msg);
                 }
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();

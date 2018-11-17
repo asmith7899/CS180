@@ -113,7 +113,9 @@ final class ChatServer {
 
         private synchronized void broadcast(String message) { //prints message to terminal of every user, plus server terminal
             for (ClientThread client : clients) {
-                client.writeMessage(message);
+                if (client.id != this.id) {
+                    client.writeMessage(message);
+                }
             }
             System.out.println(message);
         }
